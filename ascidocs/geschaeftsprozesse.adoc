@@ -1,0 +1,336 @@
+ifndef::imagesdir[:imagesdir: images]
+
+
+= Geschäftsprozesse
+
+== SQL Üben
+
+ifndef::backend-pdf[image:SQL_Ueben.JPG[]]
+
+=== Anmeldung
+Jeder Schüler besitzt einen eindeutigen Tancode, der für die Verwendung des Übungsmodus verlangt wird. Der Schüler fügt seinen 16-stelligen Tancode ein, der anschließend in
+der Datenbank überprüft wird. Nach erfolgreicher Anmeldung wird der Schüler auf die
+Seite des Übungsmodus weitergeleitet.
+
+=== Datenmodell auswählen
+Nach der Weiterleitung wählt der Schüler in der Menüleiste Übungen aus. Im ersten
+Schritt muss der Schüler ein Datenmodell auswählen, von dem er zufällig ausgewählte SQL-Statements beziehungsweise Fragen üben kann.
+Um eine bessere Übersicht über die Tabellen und deren Beziehungen untereinander zu bekommen, werden die einzelnen
+Datenmodelle als ER-Diagramm angezeigt.
+
+=== Thema auswählen
+Nachdem der Schüler ein Datenmodell selektiert hat, ist er verpichtet ein Thema auszuwählen.
+Die einzelnen Themen sind fix definiert und in der Datenbank hinterlegt. Die SQLThemen sind in DML und DQL untergliedert.
+DML ist die Datenbanksprache für das Abfragen, Einfügen, Ändern oder Löschen von Daten und enthält in unserem System mehrere Unterkategorien.
+Folgende Kategorien werden für DML verwendet:
+
+* Select Basics
+* Select Where
+* Join
+* Arithmetische Ausdrücke
+
+Für DML wird verwendet:
+
+• Insert
+• Update
+• Delete
+
+=== Anzahl der Fragen auswählen
+Um schließlich die Fragen üben und die SQL-Statements ausführen zu können, muss
+der Schüler vor der Durchführung die Anzahl der Fragen auswählen. Der Benutzer kann
+zwischen 5 und 15 Fragen selektieren. Falls es zum ausgewählten Thema nicht so viele
+Fragen gibt wie ausgewählt wurden, so wird die maximale Anzahl der Fragen zu diesem
+Thema verwendet.
+
+=== Durchführung
+Wenn der Schüler das Thema und die Anzahl der Fragen ausgewählt hat, so werden per
+Zufall Fragen zu dem ausgewählten Datenmodell entnommen.
+Der Schüler hat dabei die Möglichkeit, SQL-Statments unabhängig von der Fragestellung auszuführen, um so mit
+dem Datenmodell besser vertraut zu werden.
+Bei jeder Fragenstellung wird ein neues SQL-Statement verlangt, das später mit der Lösung verglichen und ausgewertet wird.
+Zusätzlich wird eine Lösungstabelle angeboten, die das Ergebnis bei der Ausführung des richtigen SQL-Statements anzeigt.
+Der Schüler bekommt dadurch einen Hinweis, wie zum Beispiel die Spaltennamen und der Inhalt der Tabelle bei Ausführung des richtigen SQLStatements aussehen soll. Falls sich der Schüler sicher ist, so wählt er die nächste Frage
+aus.
+Er hat ebenfalls die Möglichkeit, nach dem Beantworten der letzte Frage, wieder zum Anfang der Fragen zurückzuspringen, um so die SQL-Statmenets, wenn nötig, noch
+einmal kontrollieren zu können.
+
+=== Auswertung
+Dem HTL-Schüler wird nach Beanwortung der zufällig herausgelterten Fragen eine
+Übersicht zur Verfügung gestellt, die eine Tabelle mit den falsch beantworten Fragen
+und den richtig beanworteten Fragen anzeigt. Weiters wird dargestellt, in welcher Kartei
+sich die beanwortete Frage nun beendet. Bei falsch beanwortete Fragen werden diese Fragen in die nächste obere Kartei eingefügt.
+Wenn der Schüler eine Frage richtig beanwortet, so wird die Frage in nächste untere Kartei befördert. Der Schüler kann nun wieder ein
+Datenmodell auswählen und von diesem wieder SQL-Statements üben.
+
+___
+== Lernkartei
+
+ifndef::backend-pdf[image:Lernkartei.JPG[]]
+
+== Anmeldung
+Um zur Darstellung der Lernkarteien zu gelangen, gibt der Schüler, gleich wie beim SQLÜben, seinen 16-stelligen Tancode ein.
+Nach erfolgreicher Anmeldung wird der Schüler auf die Seite des Übungsmodus weitergeleitet.
+
+== Datenmodell auswählen
+Nach der Authentifizierung wählt der Schüler in der Menüleiste Lernkartei aus.
+Zu Beginn muss der Schüler ein Datenmodell auswählen, von dem er zufällig ausgewählte Fragen üben kann.
+Die Datenmodelle werden wieder als ER-Diagramm angezeigt, die der Schüler durch Anklicken auswählen kann.
+Zu beachten dabei ist, dass Datenmodelle nur verwendet werden können, wenn diese Fragen enthalten.
+Falls keine Fragen in einem Datenmodell vorhanden sind, so bekommt der Schüler eine Nachricht, dass keine Fragen zu diesem Datenmodell zur Verfügung stehen.
+Im Gegensatz zum SQL-Üben werden zusätzlich zu den ER-Diagrammen die einzelnen Lernkarteien angezeigt. Jede Lernkartei wird als Balken dargestellt, die den Prozentsatz
+der Fragen anzeigt. Alle Fragen beenden sich bei der ersten Benützung des SQL-Trainers in der Anfängerkartei.
+Die Schüler können daher nur Fragen aus der Anfängerkartei üben.
+
+== Lernkartei auswählen
+Nach der Selektion des Datenmodells muss der Schüler eine der drei verschiedenen Lernkarteien auswählen.
+Es gibt drei verschiedene Lernkarteien:
+
+• Anfänger (Kategorie A)
+• Fortgeschrittene (Kategorie B)
+• Pro (Kategorie C)
+
+Der HTL-Schüler kann für sich selbst entscheiden, ob er Fragen üben will, die sich in
+der Anfängerkartei benden, um so diejenigen Fragen zu üben, die er noch nicht so gut
+kann. Falls er sein SQL-Wissen festigen möchte, so wählt er die Pro-Kartei aus. Die 17
+einzelnen Fragen für die ausgewählte Lernkartei werden dabei wieder per Zufall herausgeltert. Sind keine Fragen in der ausgewählten Kartei vorhanden, so wird der Benutzer
+benachrichtigt und er muss eine andere Lernkartei auswählen.
+
+== Anzahl der Fragen auswählen
+Um nun die Fragen üben und die SQL-Statements ausführen zu können, muss der Benutzer am Ende die gewünschte Anzahl der Fragen auswählen. Der Benutzer kann wieder
+zwischen 5 und 15 Fragen auswählen. Liegt die Anzahl der ausgewählten Fragen über der
+Anzahl, die sich in der gewünschten Lernkartei bendet, so wird die maximale Anzahl
+der Fragen dieser Lernkartei verwendet. In diesem Abschnitt ist dies jedoch nicht häug
+der Fall, da bei der Lernkartei keine eine Einschränkung der Themen vorliegt. Es werden
+alle Fragen der Lernkartei geltert, unabhängig vom Thema.
+
+== Durchführung
+Wenn der Schüler die Lernkartei und die Anzahl der Fragen festgelegt hat, so werden per
+Zufall Fragen, unabhängig vom Thema, zu dem ausgewählten Datenmodell entnommen.
+Der Benutzer kann SQL-Statments unabhängig von der Fragestellung ausführen, um so
+mit dem Datenmodell besser vertraut zu werden. Gleich wie beim SQL-Üben wird bei
+jeder Fragenstellung ein neues SQL-Statement verlangt, das später ebenfalls mit der Lösung verglichen und ausgewertet wird. Der Schüler kann die Lösungstabelle zur Kontrolle
+des eingegeben SQL-Statements verwenden.
+
+== Hand In
+Falls sich der Benutzer sicher ist, so gibt er seine Antworten ab. Der Schüler kann auch
+ohne Beantwortung von mehreren Fragen seine Antworten auswerten lassen. Die nicht
+beantworteten Fragen werden dann als inkorrekt ausgewertet.
+
+== Auswertung
+Nach erfolgreicher Abgabe werden die einzelnen Antworten des Schülers ausgewertet und
+mit den zugehörigen Lösungen verglichen. Es werden dabei nicht die SQL-Statements
+miteinander verglichen, sondern das Ergebnis bei der Ausführung der einzelnen SQLStatements in dem SQL-Schema. Zur Darstellung der einzelnen Ergebnisse jeder Frage
+wird dieselbe Tabelle wie beim SQL-Üben verwendet.
+
+___
+== Simulierter Test
+
+ifndef::backend-pdf[image:Simulierter_Test.JPG[]]
+
+== Anmeldung
+Die Anmeldung erfolgt in der gleichen Art und Weise wie bei der Lernkartei und SQLÜben. Der Benutzer gibt seinen zugewiesenen Tancode ein, um so in den Übungsmodus
+einsteigen zu können. Bei falscher Authentizierung wird der Schüler wieder auf die
+Login-Seite verzweigt.
+
+== Datenmodell auswählen
+Im nächsten Schritt wählt der Schüler in der Menüleiste Simulierter Test aus.
+Anders als bei den anderen Dialogen kann der Benutzer nur ein Datenmodell auswählen, ohne
+die Anzahl der Fragen, sowie Lernkartei und das Thema festzulegen.
+Ein simulierter Test wird dann erstellt, wenn für das ausgewählte Datenmodell Fragen existieren.
+Dabei werden dem Schüler Fragen gestellt, die sich auf mehrere Themen der SQL-Abfragsprache beziehen.
+Für jedes Thema wird eine Frage zufällig ausgewählt und dem Schüler vorgelegt.
+Je nach der Anzahl der Themen und Anzahl der Fragen in dem Datenmodell kann der Umfang eines simulierten Testes varrieren.
+Ist nur eine Frage pro Thema für dieses Datenmodell zur Verfügung, so bekommt der Schüler immer den gleichen simulierten Test.
+Falls es zu einem Thema mehrere Fragen gibt, so kann der simulierte Test zu diesem Datenmodell unterschiedlich sein.
+Die Anzahl der Fragen für ein Datenmodell wächst mit der Zeit und somit die Fragestellungen bei einem simulierten Test.
+
+== Durchführung
+Nachdem die Fragen für den simulierten Test festgelegt wurden, kann der Schüler auf
+einer neuen Seite die gestellten Fragen beantworten.
+Der Benutzer hat wieder die Möglichkeit, eine Frage mehrmals durchzuführen beziehungsweise zu überprüfen.
+Für einen simulierten Test werden keine Lösungstabellen zur Verfügung gestellt, um so das Wissen
+des Schülers besser überprüfen zu können.
+Jede neue Frage bezieht sich auf ein anderes Thema.
+Anschließend wird die Lösung zu einer Frage und die Antwort einer Frage des Benutzers gegenüber gestellt und nach einem Kriterienkatalog ausgewertet.
+
+== Hand In
+Nachdem der Schüler seine SQL-Statements überprüft und noch einmal ausgeführt hat,
+gibt er den simulierten Test ab. Nicht beantwortete Fragen werden als falsch beanwortete
+Fragen ausgewertet.
+
+== Auswertung
+Die Auswertung jedes einzelnen SQL-Statmenets erfolgt nach dem gleichen Kritierenkatalog.
+Im Gegenzug zu den anderen Auswertungen werden die Antworten nicht in die
+Datenbank gespeichert.
+Die gestellten Fragen haben keinen Einfluss auf die Lernkartei,
+das heißt, falls ein Benutzer eine Frage richtig beanwortet hat, so wird diese Frage nicht
+in die nächste Lernkartei befördert. Dies gilt auch für falsch beantwortete Fragen.
+Der simulierte Test dient nur zur Überprüfung des gesamten Wissens des Schülers.
+Als nächstes wird eine Tabelle angezeigt, die zu jeder Frage die Lösung und die Antwort
+des Schülers anzeigt. Der Schüler kann seine Fehler in seinen SQL-Statements feststellen und somit für das nächste Mal beheben.
+Ein weiterer simulierter Test kann jederzeit
+durchgeführt werden.
+
+
+== SQL Üben
+
+ifndef::backend-pdf[image:SQL_Ueben.JPG[]]
+
+=== Anmeldung
+Jeder Schüler besitzt einen eindeutigen Tancode, der für die Verwendung des Übungsmodus verlangt wird. Der Schüler fügt seinen 16-stelligen Tancode ein, der anschließend in
+der Datenbank überprüft wird. Nach erfolgreicher Anmeldung wird der Schüler auf die
+Seite des Übungsmodus weitergeleitet.
+
+=== Datenmodell auswählen
+Nach der Weiterleitung wählt der Schüler in der Menüleiste Übungen aus. Im ersten
+Schritt muss der Schüler ein Datenmodell auswählen, von dem er zufällig ausgewählte SQL-Statements beziehungsweise Fragen üben kann.
+Um eine bessere Übersicht über die Tabellen und deren Beziehungen untereinander zu bekommen, werden die einzelnen
+Datenmodelle als ER-Diagramm angezeigt.
+
+=== Thema auswählen
+Nachdem der Schüler ein Datenmodell selektiert hat, ist er verpichtet ein Thema auszuwählen.
+Die einzelnen Themen sind fix definiert und in der Datenbank hinterlegt. Die SQLThemen sind in DML und DQL untergliedert.
+DML ist die Datenbanksprache für das Abfragen, Einfügen, Ändern oder Löschen von Daten und enthält in unserem System mehrere Unterkategorien.
+Folgende Kategorien werden für DML verwendet:
+
+* Select Basics
+* Select Where
+* Join
+* Arithmetische Ausdrücke
+
+Für DML wird verwendet:
+
+• Insert
+• Update
+• Delete
+
+=== Anzahl der Fragen auswählen
+Um schließlich die Fragen üben und die SQL-Statements ausführen zu können, muss
+der Schüler vor der Durchführung die Anzahl der Fragen auswählen. Der Benutzer kann
+zwischen 5 und 15 Fragen selektieren. Falls es zum ausgewählten Thema nicht so viele
+Fragen gibt wie ausgewählt wurden, so wird die maximale Anzahl der Fragen zu diesem
+Thema verwendet.
+
+=== Durchführung
+Wenn der Schüler das Thema und die Anzahl der Fragen ausgewählt hat, so werden per
+Zufall Fragen zu dem ausgewählten Datenmodell entnommen.
+Der Schüler hat dabei die Möglichkeit, SQL-Statments unabhängig von der Fragestellung auszuführen, um so mit
+dem Datenmodell besser vertraut zu werden.
+Bei jeder Fragenstellung wird ein neues SQL-Statement verlangt, das später mit der Lösung verglichen und ausgewertet wird.
+Zusätzlich wird eine Lösungstabelle angeboten, die das Ergebnis bei der Ausführung des richtigen SQL-Statements anzeigt.
+Der Schüler bekommt dadurch einen Hinweis, wie zum Beispiel die Spaltennamen und der Inhalt der Tabelle bei Ausführung des richtigen SQLStatements aussehen soll. Falls sich der Schüler sicher ist, so wählt er die nächste Frage
+aus.
+Er hat ebenfalls die Möglichkeit, nach dem Beantworten der letzte Frage, wieder zum Anfang der Fragen zurückzuspringen, um so die SQL-Statmenets, wenn nötig, noch
+einmal kontrollieren zu können.
+
+=== Auswertung
+Dem HTL-Schüler wird nach Beanwortung der zufällig herausgelterten Fragen eine
+Übersicht zur Verfügung gestellt, die eine Tabelle mit den falsch beantworten Fragen
+und den richtig beanworteten Fragen anzeigt. Weiters wird dargestellt, in welcher Kartei
+sich die beanwortete Frage nun beendet. Bei falsch beanwortete Fragen werden diese Fragen in die nächste obere Kartei eingefügt.
+Wenn der Schüler eine Frage richtig beanwortet, so wird die Frage in nächste untere Kartei befördert. Der Schüler kann nun wieder ein
+Datenmodell auswählen und von diesem wieder SQL-Statements üben.
+
+== Fragen hochladen
+
+ifndef::backend-pdf[image:Fragen-hochladen.JPG[]]
+
+=== Anmeldung
+Um neue Fragen hochladen zu können, geben die Lehrer ihren gewöhnlichen Benutzernamen und ihr Passwort ein.
+Der Lehrermodus darf nur von Lehrern der HTL benützt werden, die SQL unterrichten.
+Die einzelnen Lehrer sind dazu in einer Tabelle eingetragen, die für die Anmeldung verwendet wird. Falls die Lehrer einen falschen Benutzernamen oder ein falsches Passwort
+eingefügt haben, werden sie wieder auf die Login-Seite verzweigt.
+
+=== CSV-File auswählen
+Nach erfogreicher Anmeldung können die Benutzer des Lehrermodus im ersten Schritt
+ein neues Datenmodell hochladen. Um neue Fragen in den SQL-Trainer einfügen zu können, muss in der Menüleisten Fragen hochladen selektiert werden. Die selbst erstellten
+Fragen werden dazu von den Lehrern in eine CSV-File eingefügt. Die Vorlage der CSVFile wird als Download zur Verfügung gestelllt. Der Lehrer ladet die Vorlage herunter
+und stellt die Fragen in die Vorlage hinein.
+
+Eine derartige CSV-File sieht folgendermaÿen aus:
+
+ifndef::backend-pdf[image:csv.JPG[]]
+
+Die Vorlage enthält Fragen, die den Text für die dazugehörige SQL-Statements beschreibt, und das SQL-Statement selbst.
+Die Datenmodelle, sowie die Themen werden in
+der Datei nicht angeführt.
+Nachdem die CSV-File hochgeladen wurde, werden die Fragen
+und die SQL-Statements in einer Tabelle dargestellt.
+Die Benutzer haben nun die Möglichkeit die Datenmodelle und Themen der einzelnen SQL-Statements festzulegen, die in
+einer Drop-Down-Box ausgewählt werden können.
+
+=== Fragen hochladen
+Nach der Auswahl der Datenmodelle und der Themen werden die Statements überprüft.
+Dazu wird ein SQL-Schema bereit gestellt, die diese Überprüfung ermöglicht.
+Sind bereits
+gleiche Fragen wie in der CSV-File in der Datenbank enthalten, so werden diese über24
+schrieben. Für ein falsch angeführtes SQL-Statements wird die Überprüfung abgebrochen
+und eine Fehlermeldung ausgegeben. Die hochgeladenen Fragen können im nachhinein
+zu jeder Zeit bearbeitet werden.
+
+
+
+___
+
+== Fragen hochladen
+
+ifndef::backend-pdf[image:Fragen-bearbeiten.JPG[]]
+
+=== Anmeldung
+Um Fragen zu bearbeiten, muss sich der Lehrer erfolgreich am schuleigenen LDAP-System
+authentizieren.
+
+=== Fragen auswählen
+Im ersten Schritt werden die zu bearbeitenden Fragen im Fragenkatalog selektiert. Es
+können Filter für das schnelle Finden von Fragen gesetzt werden. Anschließend können
+die einzelnen Spalten der Tabelle nach dem Text oder nach nummerischen Zeichen aufsteigend oder absteigend sortiert werden. Wenn der Lehrer eine Frage gefunden hat, so
+wird diese per Mausklick markiert. Weitere Fragen können im Fragenkatalog durchsucht
+und markiert werden. Die einzelnen Fragen können explizit in einem Suchfeld der Spalten
+gesucht werden.
+
+=== Fragen bearbeiten
+Nachdem die Fragen markiert wurden, können die Fragen in einem neuen Fenster bearbeitet werden. Es kann beispielsweise das Datenmodell zu der Frage geändert, das
+SQL-Statement überarbeitet, ein neuer Text eingefügt und das Thema geändert werden.
+
+=== Änderung speichern
+Infolgedessen werden die neuen SQL-Statements auf ihre Syntax überprüft. Darüber
+hinaus wird ein SQL-Schema bereitgestellt, in dem die Statements getestet werden. Im
+Verlauf der Überprüfung werden die einzelnen Fragen nach ihren Datenmodell sortiert,
+sodass die Datenmodelle nicht mehrmals in das SQL-Schema eingefügt werden.
+
+___
+
+== Test erstellen
+
+ifndef::backend-pdf[image:Test-erstellen.JPG[]]
+
+=== Anmeldung
+Die Erstellung eines Tests erfordert die Bekanntgabe des Benutzers im Lehrermodus.
+
+=== Testauswahl
+Um einen Test erstellen zu können, muss der Menüpunkt Test erstellen selektiert werden.
+Zu Beginn muss der Ersteller des Tests einen Test bestimmen.
+Einerseits kann ein
+neuer Test ausgewählt werden, bei diesem der Lehrer die Fragen selbst zu dem Test hinzufügt, andererseits kann ein Test eines anderen Lehrers ausgewählt werden.
+Die Fragen
+des anderen Lehrers werden automatisch in den neuen Test eingefügt.
+Der Lehrer muss
+somit keine Fragen im Katalog durchsuchen, die er für seinen Test verwenden will. Um
+die anderen Tests der Lehrer anzeigen zu können, muss eine Checkbox ausgewählt werden.
+
+=== Fragen auswählen
+Nun wird der Fragenkatalog dargestellt. Der Benutzer kann jederzeit neue Fragen zum
+aktuellen Test hinzufügen, aber auch wieder löschen. Der Benutzer kann selbst entscheiden, wie viel Fragen er in der Tabelle anzeigen will. Es können 5, 10 oder 15 Fragen in
+der Tabelle angezeigt werden. Der Fragenkatalog kann nach den Tabellenspalten sortiert
+werden (Text, SQL, Thema und Datenmodell). Ebenfalls können die einzelnen Fragen
+nach den Kritieren gesondert abgefragt werden. Ein Suchfeld ist zu jedem Kriterium vorhanden.
+
+=== Tancodes generieren
+Wurde die Selektion der Fragen fertiggestellt, so muss der Benutzer Tancodes für diesen
+Test erstellen. Die Tancodes für den Testmodus bestehen ebenfalls aus 16 Zeichen, die
+eindeutig sind. Die Anzahl der Tancodes kann vom Lehrer selbst festgelegt werden. Nach
+der Generierung der Tancodes können die Informationen des Tests nochmals überprüft
+werden und wenn nötig geändert werden. Im Anschluss wird der Ersteller des Tests auf
+eine Seite verwiesen, die eine Übersicht der bereits erstellten Tests anzeigt. Dort können
+die Statistiken und Ergebnisse der Tests angezeigt und ausgedruckt werden.
+
