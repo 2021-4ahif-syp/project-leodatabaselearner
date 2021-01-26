@@ -1,9 +1,15 @@
 package at.htl.entity;
 
+import org.hibernate.annotations.Generated;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
 public class SqlExam {
-    private int counter = 0;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private Date date;
     private String name;
@@ -12,7 +18,6 @@ public class SqlExam {
 
 
     public SqlExam(Date date, String name, String owner, String description) {
-        this.id = ++counter;
         this.date = date;
         this.name = name;
         this.owner = owner;
