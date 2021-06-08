@@ -11,6 +11,7 @@ public class Sql_Exercise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private Date date;
     private String name;
     private String owner;
