@@ -1,6 +1,5 @@
 package at.htl.control;
 
-import at.htl.entity.SqlStatement;
 import at.htl.entity.Sql_Answer;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
@@ -15,7 +14,7 @@ public class Sql_AnswerRepository implements PanacheRepository<Sql_Answer> {
 
     @Transactional
     public void delete(long id, Sql_Answer type) {
-        this.delete(find(id, type));
+        this.delete(findById(id));
     }
 
 }

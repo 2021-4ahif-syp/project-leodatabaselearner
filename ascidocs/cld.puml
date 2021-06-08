@@ -1,0 +1,31 @@
+@startuml
+
+class Sql_Answer{
+  String name
+  String address
+  int age
+}
+
+class Sql_Question{
+   String groupName
+}
+
+class Sql_Exercise{
+    String day
+}
+
+class Sql_Statement{
+}
+
+Sql_Answer "1" -- "1...*" Sql_Statement
+Sql_Question "1" -- "1" Sql_Answer
+Sql_Exercise "1" -- "1...*" Sql_Question
+
+
+hide members
+show Sql_Answer fields
+show Sql_Exercise fields
+show Sql_Question fields
+show Sql_Statement fields
+
+@enduml

@@ -1,15 +1,14 @@
 package at.htl.control;
 
-import at.htl.entity.SqlExam;
-import at.htl.entity.SqlStatement;
+import at.htl.entity.Sql_Exercise;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import javax.transaction.Transactional;
 
-public class SqlExamRepository implements PanacheRepository<SqlExam> {
+public class SqlExamRepository implements PanacheRepository<Sql_Exercise> {
 
     @Transactional
-    public SqlExam save(SqlExam sqlExamToSave) {
+    public Sql_Exercise save(Sql_Exercise sqlExamToSave) {
         return getEntityManager().merge(sqlExamToSave);
     }
 
