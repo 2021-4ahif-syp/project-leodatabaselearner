@@ -1,9 +1,6 @@
 package at.htl.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -12,7 +9,10 @@ public class Sql_Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(name = "IS_CORR")
     private boolean isCorr;
+    @Column(name = "ANSWER")
     private String answer;
 
 
@@ -24,6 +24,9 @@ public class Sql_Answer {
         this.answer = answer;
     }
 
+    private boolean checkAnswer() {
+        return false;
+    }
 
     public boolean isCorr() {
         return isCorr;
