@@ -12,9 +12,9 @@ public class Sql_Tan {
     private Date end;
     private boolean forPract;
     private long scheme_id;
-    private long exam_id;
+    private long exercise_id;
 
-    public Sql_Tan(String tancode, int lfdNr, Date login, int cnt_Login, Date start, Date end, boolean forPract, long scheme_id, long exam_id ){
+    public Sql_Tan(String tancode, int lfdNr, Date login, int cnt_Login, Date start, Date end, boolean forPract, long scheme_id, long exercise_id ){
         this.tancode = tancode;
         this.lfdNr = lfdNr;
         this.login = login;
@@ -23,6 +23,6 @@ public class Sql_Tan {
         this.end = end;
         this.forPract = forPract;
         this.scheme_id = scheme_id;
-        this.exam_id = exam_id;
+        this.exercise_id = exercise_id;
     }
 }
