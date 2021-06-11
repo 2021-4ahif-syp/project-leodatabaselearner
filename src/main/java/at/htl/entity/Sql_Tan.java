@@ -1,0 +1,28 @@
+package at.htl.entity;
+
+import java.util.Date;
+
+public class Sql_Tan {
+    private long id;
+    private String tancode;
+    private int lfdNr;
+    private Date login;
+    private int cnt_Login;
+    private Date start;
+    private Date end;
+    private boolean forPract;
+    private long scheme_id;
+    private long exam_id;
+
+    public Sql_Tan(String tancode, int lfdNr, Date login, int cnt_Login, Date start, Date end, boolean forPract, long scheme_id, long exam_id ){
+        this.tancode = tancode;
+        this.lfdNr = lfdNr;
+        this.login = login;
+        this.cnt_Login = cnt_Login;
+        this.start= start;
+        this.end = end;
+        this.forPract = forPract;
+        this.scheme_id = scheme_id;
+        this.exam_id = exam_id;
+    }
+}
