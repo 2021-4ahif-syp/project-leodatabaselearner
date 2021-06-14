@@ -1,8 +1,12 @@
 package at.htl.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity(name = "L_SCHEME")
 public class Sql_Scheme {
+    @Id
     private long id;
     //@Column(name = "Scheme_Name")
     private String name;
