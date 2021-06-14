@@ -4,13 +4,14 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "L_SQL_ANSWER")
 public class Sql_Answer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "IS_CORR")
+    @Column(name = "ISCORR")
     private boolean isCorr;
     @Column(name = "ANSWER")
     private String answer;
