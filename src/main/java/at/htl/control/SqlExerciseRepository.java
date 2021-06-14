@@ -5,7 +5,7 @@ import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import javax.transaction.Transactional;
 
-public class SqlExamRepository implements PanacheRepository<Sql_Exercise> {
+public class SqlExerciseRepository implements PanacheRepository<Sql_Exercise> {
 
     @Transactional
     public Sql_Exercise save(Sql_Exercise sqlExamToSave) {
