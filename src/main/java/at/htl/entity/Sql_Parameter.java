@@ -3,7 +3,7 @@ package at.htl.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "L_SQL_PARAMETER")
+@Table(name = "L_PARAMETER")
 public class Sql_Parameter {
 
     @Id

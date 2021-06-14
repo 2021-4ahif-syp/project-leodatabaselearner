@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "L_SQL_EXERCISE")
+@Table(name = "L_EXERCISE")
 public class Sql_Exercise {
 
     //Fields

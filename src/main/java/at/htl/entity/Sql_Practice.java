@@ -9,7 +9,6 @@ public class Sql_Practice {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private long id;
     private String answer;
     private boolean isCorr;
     private int level;
