@@ -4,6 +4,8 @@ import at.htl.entity.Sql_Exercise;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import javax.transaction.Transactional;
+import java.util.Collections;
+import java.util.List;
 
 @Transactional
 public class SqlExerciseRepository implements PanacheRepository<Sql_Exercise> {
@@ -14,6 +16,7 @@ public class SqlExerciseRepository implements PanacheRepository<Sql_Exercise> {
     }
 
 
-    public Object findAllExercises() {
+    public List<Sql_Exercise> findAllExercises() {
+        return Collections.unmodifiableList(listAll());
     }
 }

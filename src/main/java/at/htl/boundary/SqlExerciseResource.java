@@ -25,7 +25,7 @@ public class SqlExerciseResource {
     @Produces(MediaType.APPLICATION_JSON)
     @GET
     public Response findAll(){
-        return Response.ok(sqlExerciseRepository.findAllExercises())
+        return Response.ok(sqlExerciseRepository.findAllExercises()).build();
     }
 
 }
