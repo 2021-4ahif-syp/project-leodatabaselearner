@@ -2,11 +2,11 @@ package at.htl.entity;
 
 import org.hibernate.annotations.Generated;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "L_SQL_EXERCISE")
 public class Sql_Exercise {
 
     //Fields
@@ -14,9 +14,16 @@ public class Sql_Exercise {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "DATE")
     private Date date;
+
+    @Column(name = "NAME")
     private String name;
+
+    @Column(name = "OWNER")
     private String owner;
+
+    @Column(name = "DESCRIPTION")
     private String description;
 
 
