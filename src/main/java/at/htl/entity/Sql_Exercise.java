@@ -26,7 +26,7 @@ public class Sql_Exercise {
     @Column(name = "DESCRIPTION")
     private String description;
 
-
+    public  Sql_Exercise(){}
 
 
     public Sql_Exercise(Date date, String name, String owner, String description) {
