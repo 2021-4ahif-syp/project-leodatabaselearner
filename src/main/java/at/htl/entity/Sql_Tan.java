@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
 
-@Entity
+@Entity(name = "L_TAN")
 public class Sql_Tan {
     @Id
     private long id;

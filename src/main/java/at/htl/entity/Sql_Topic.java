@@ -3,7 +3,7 @@ package at.htl.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Entity(name = "L_TOPIC")
 public class Sql_Topic {
     @Id
     private Long id;
