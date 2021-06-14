@@ -1,8 +1,12 @@
 package at.htl.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
+@Entity(name = "L_TAN")
 public class Sql_Tan {
+    @Id
     private long id;
     private String tancode;
     private int lfdNr;
@@ -24,5 +28,8 @@ public class Sql_Tan {
         this.forPract = forPract;
         this.scheme_id = scheme_id;
         this.exercise_id = exercise_id;
+    }
+
+    public Sql_Tan() {
     }
 }
