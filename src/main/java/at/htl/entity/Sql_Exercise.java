@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import java.util.Date;
 
 public class Sql_Exercise {
+
+    //Fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -15,6 +17,8 @@ public class Sql_Exercise {
     private String name;
     private String owner;
     private String description;
+
+
 
 
     public Sql_Exercise(Date date, String name, String owner, String description) {
