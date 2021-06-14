@@ -5,6 +5,7 @@ import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import javax.transaction.Transactional;
 
+@Transactional
 public class SqlExerciseRepository implements PanacheRepository<Sql_Exercise> {
 
     @Transactional
@@ -12,4 +13,7 @@ public class SqlExerciseRepository implements PanacheRepository<Sql_Exercise> {
         return getEntityManager().merge(sqlExamToSave);
     }
 
+
+    public Object findAllExercises() {
+    }
 }
