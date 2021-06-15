@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "L_SQL_EXERCISE")
+@Table(name = "L_EXERCISE")
 public class Sql_Exercise {
 
     //Fields
@@ -26,7 +26,7 @@ public class Sql_Exercise {
     @Column(name = "DESCRIPTION")
     private String description;
 
-
+    public  Sql_Exercise(){}
 
 
     public Sql_Exercise(Date date, String name, String owner, String description) {

@@ -1,7 +1,14 @@
 package at.htl.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "L_PRACTICE")
 public class Sql_Practice {
-    private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String answer;
     private boolean isCorr;
     private int level;
