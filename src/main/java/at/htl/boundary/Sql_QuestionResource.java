@@ -19,9 +19,10 @@ public class Sql_QuestionResource {
     @Inject
     Sql_QuestionRepository sqlQuestionRepository;
 
-
-
-
-
+    @Produces(MediaType.APPLICATION_JSON)
+    @GET
+    public Response findAll(){
+        return Response.ok(sqlQuestionRepository.findAllQuestions()).build();
+    }
 
 }
