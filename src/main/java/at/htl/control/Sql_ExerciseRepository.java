@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Transactional
-public class SqlExerciseRepository implements PanacheRepository<Sql_Exercise> {
+public class Sql_ExerciseRepository implements PanacheRepository<Sql_Exercise> {
 
     @Transactional
     public Sql_Exercise save(Sql_Exercise sqlExamToSave) {
@@ -18,10 +18,14 @@ public class SqlExerciseRepository implements PanacheRepository<Sql_Exercise> {
 
 
     public List<Sql_Exercise> findAllExercises() {
+
         return Collections.unmodifiableList(listAll());
+
     }
 
     public List<Sql_Exercise> findAllSortedByName() {
+
         return Collections.unmodifiableList(listAll(Sort.by("NAME")));
+
     }
 }

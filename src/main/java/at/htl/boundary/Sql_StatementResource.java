@@ -1,6 +1,6 @@
 package at.htl.boundary;
 
-import at.htl.control.SqlStatementRepository;
+import at.htl.control.Sql_StatementRepository;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -10,10 +10,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/resteasy/leodatabase")
-public class SqlStatementResource {
+public class Sql_StatementResource {
 
     @Inject
-    SqlStatementRepository sqlStatementRepository;
+    Sql_StatementRepository sqlStatementRepository;
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})

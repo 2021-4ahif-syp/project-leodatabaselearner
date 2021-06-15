@@ -1,8 +1,6 @@
 package at.htl.boundary;
 
-import at.htl.control.SqlExerciseRepository;
 import at.htl.control.Sql_QuestionRepository;
-import at.htl.entity.Sql_Question;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;

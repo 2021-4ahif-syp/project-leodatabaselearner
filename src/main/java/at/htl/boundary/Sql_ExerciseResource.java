@@ -1,26 +1,20 @@
 package at.htl.boundary;
 
-import at.htl.control.SqlExerciseRepository;
-import at.htl.entity.Sql_Exercise;
-import io.quarkus.narayana.jta.runtime.TransactionConfiguration;
+import at.htl.control.Sql_ExerciseRepository;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import javax.transaction.Transactional;
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.awt.*;
 
 @RequestScoped
 @Path("/Exercise")
-public class SqlExerciseResource {
+public class Sql_ExerciseResource {
     @Inject
-    SqlExerciseRepository sqlExerciseRepository;
+    Sql_ExerciseRepository sqlExerciseRepository;
 
     @Produces(MediaType.APPLICATION_JSON)
     @GET
