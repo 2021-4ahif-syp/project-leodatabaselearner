@@ -28,4 +28,15 @@ public class SqlExerciseResource {
         return Response.ok(sqlExerciseRepository.findAllExercises()).build();
     }
 
+    /**
+     *
+     * @return all exercises sorted by 'name'
+     */
+    @GET
+    @Path("name")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response findAllSortedByName() {
+        return Response.ok(sqlExerciseRepository.findAllSortedByName()).build();
+    }
+
 }
