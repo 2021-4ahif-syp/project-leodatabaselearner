@@ -1,6 +1,7 @@
 package at.htl.boundary;
 
 import at.htl.control.Sql_StatementRepository;
+import at.htl.control.Sql_TeacherRepository;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -9,16 +10,15 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("/Statement")
-public class Sql_StatementResource {
-
+@Path("/Teacher")
+public class Sql_TeacherResource {
     @Inject
-    Sql_StatementRepository sqlStatementRepository;
+    Sql_TeacherRepository sqlTeacherRepository;
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public Response findAll()
     {
-        return Response.ok(sqlStatementRepository.listAll()).build();
+        return Response.ok(sqlTeacherRepository.listAll()).build();
     }
 }
