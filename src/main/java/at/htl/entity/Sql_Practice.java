@@ -24,4 +24,28 @@ public class Sql_Practice {
         this.tan_id = tan_id;
         this.qst_id = qst_id;
     }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    public boolean isCorr() {
+        return isCorr;
+    }
+
+    public void setCorr(boolean corr) {
+        isCorr = corr;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
 }

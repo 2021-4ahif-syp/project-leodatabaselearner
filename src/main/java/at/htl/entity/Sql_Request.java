@@ -17,4 +17,12 @@ public class Sql_Request {
         this.date = date;
         this.qst_id = qst_id;
     }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 }

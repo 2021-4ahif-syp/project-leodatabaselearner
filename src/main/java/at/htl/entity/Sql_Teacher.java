@@ -16,4 +16,6 @@ public class Sql_Teacher {
         this.name = name;
         this.isAdmin = isAdmin;
     }
+
+
 }

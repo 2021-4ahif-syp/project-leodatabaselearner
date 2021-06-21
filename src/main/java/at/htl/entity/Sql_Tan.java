@@ -32,4 +32,60 @@ public class Sql_Tan {
 
     public Sql_Tan() {
     }
+
+    public String getTancode() {
+        return tancode;
+    }
+
+    public void setTancode(String tancode) {
+        this.tancode = tancode;
+    }
+
+    public int getLfdNr() {
+        return lfdNr;
+    }
+
+    public void setLfdNr(int lfdNr) {
+        this.lfdNr = lfdNr;
+    }
+
+    public Date getLogin() {
+        return login;
+    }
+
+    public void setLogin(Date login) {
+        this.login = login;
+    }
+
+    public int getCnt_Login() {
+        return cnt_Login;
+    }
+
+    public void setCnt_Login(int cnt_Login) {
+        this.cnt_Login = cnt_Login;
+    }
+
+    public Date getStart() {
+        return start;
+    }
+
+    public void setStart(Date start) {
+        this.start = start;
+    }
+
+    public Date getEnd() {
+        return end;
+    }
+
+    public void setEnd(Date end) {
+        this.end = end;
+    }
+
+    public boolean isForPract() {
+        return forPract;
+    }
+
+    public void setForPract(boolean forPract) {
+        this.forPract = forPract;
+    }
 }
