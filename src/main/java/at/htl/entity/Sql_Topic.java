@@ -15,4 +15,12 @@ public class Sql_Topic {
     public Sql_Topic(String tipName) {
         this.tipName = tipName;
     }
+
+    public String getTipName() {
+        return tipName;
+    }
+
+    public void setTipName(String tipName) {
+        this.tipName = tipName;
+    }
 }
