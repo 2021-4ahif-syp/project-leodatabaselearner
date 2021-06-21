@@ -7,7 +7,11 @@ public class Sql_Script {
     private int script_order;
     private long dm_id;
 
-
+    public Sql_Script(String script_type, String script_path, int script_order) {
+        this.script_type = script_type;
+        this.script_path = script_path;
+        this.script_order = script_order;
+    }
 
     public String getScript_type() {
         return script_type;
