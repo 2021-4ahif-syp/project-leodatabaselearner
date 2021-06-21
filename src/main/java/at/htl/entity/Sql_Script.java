@@ -1,7 +1,14 @@
 package at.htl.entity;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Sql_Script {
-    private long script_id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String script_type;
     private String script_path;
     private int script_order;
